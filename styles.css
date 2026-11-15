@@ -68,7 +68,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 /* desktop: person on the left, text on the right */
 @media(min-width:861px){
-  .hero-stage{grid-template-columns:auto auto;justify-content:center;max-width:1240px;margin:0 auto;column-gap:clamp(16px,3vw,48px);min-height:520px}
+  .hero-stage{grid-template-columns:auto auto;justify-content:center;max-width:1240px;margin:0 auto;column-gap:0;min-height:520px}
   .hero-text{grid-column:2;grid-row:1;position:relative;z-index:2;justify-self:start;display:flex;flex-direction:column;align-items:flex-start;
     gap:22px;padding-right:clamp(8px,3vw,48px)}
   .big-word{position:relative;top:auto;left:auto;transform:none;transform-origin:left center;
@@ -76,7 +76,10 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .hero-sub{position:static;transform:none;font-size:1.05rem;padding:5px 16px;margin:0}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
-  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0}
+  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0;
+    -webkit-mask-image:linear-gradient(to bottom,#000 42%,rgba(0,0,0,.45) 60%,transparent 74%);
+    mask-image:linear-gradient(to bottom,#000 42%,rgba(0,0,0,.45) 60%,transparent 74%)}
+  .hero-text{margin-left:clamp(-90px,-5vw,-30px)}
   .dock{margin-top:8px}
 }
 

@@ -401,29 +401,3 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 @media(max-width:560px){
   .files-stage .s1{left:52%;top:27%;z-index:3;translate:none!important}
 }
-
-/* ============ MOBILE: personality tags replace folders ============ */
-.ptags,.ptags-hint{display:none}
-@media(max-width:560px){
-  .files-stage .folder,.files-hint{display:none}
-  .ptags{display:block;list-style:none;margin:0;padding:0}
-  .ptag{position:absolute;z-index:4;display:flex;align-items:center;gap:7px;padding:7px 13px 7px 10px;border-radius:999px;
-    background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.06);
-    box-shadow:0 8px 20px -10px rgba(0,0,0,.28);font-family:var(--round);font-weight:700;font-size:.86rem;
-    letter-spacing:.06em;color:var(--ink);white-space:nowrap;animation:bob 4.5s ease-in-out infinite}
-  .ptag i{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 22%,transparent)}
-  /* leader line toward her, like an analysis callout */
-  .ptag::after{content:"";position:absolute;top:50%;width:22px;height:1px;
-    background:linear-gradient(90deg,var(--c),transparent)}
-  .ptag.l::after{left:100%;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 70%,transparent),transparent)}
-  .ptag.r::after{right:100%;background:linear-gradient(270deg,color-mix(in srgb,var(--c) 70%,transparent),transparent)}
-  .t1{left:0;top:6%}
-  .t2{right:0;top:15%;animation-delay:-.8s}
-  .t3{left:0;top:42%;animation-delay:-1.6s}
-  .t4{right:0;top:50%;animation-delay:-2.4s}
-  .t5{left:2%;top:78%;animation-delay:-3.2s}
-  .t6{right:2%;top:84%;animation-delay:-4s}
-  .files-stage.io .ptag{transition:opacity .4s ease var(--d,0s),scale .7s var(--spring) var(--d,0s)}
-  .files-stage.io:not(.in) .ptag{opacity:0;scale:.3}
-  .ptags-hint{display:block;text-align:center;font-size:.78rem;letter-spacing:.08em;color:var(--muted);margin-top:4px}
-}

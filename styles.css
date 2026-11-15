@@ -67,17 +67,17 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   font-family:var(--round);font-size:.95rem;color:#fff;letter-spacing:.04em;white-space:nowrap;
   background:rgba(27,27,31,.35);padding:3px 14px;border-radius:999px;backdrop-filter:blur(4px)}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-/* desktop: text on the left, person on the right */
+/* desktop: person on the left, text on the right */
 @media(min-width:861px){
-  .hero-stage{grid-template-columns:1.1fr 1fr;max-width:1240px;margin:0 auto;column-gap:24px;min-height:520px}
-  .hero-text{position:relative;z-index:2;justify-self:start;display:flex;flex-direction:column;align-items:flex-start;
-    gap:22px;padding-left:clamp(8px,3vw,48px)}
+  .hero-stage{grid-template-columns:1fr 1.1fr;max-width:1240px;margin:0 auto;column-gap:24px;min-height:520px}
+  .hero-text{grid-column:2;grid-row:1;position:relative;z-index:2;justify-self:start;display:flex;flex-direction:column;align-items:flex-start;
+    gap:22px;padding-right:clamp(8px,3vw,48px)}
   .big-word{position:relative;top:auto;left:auto;transform:none;transform-origin:left center;
     font-size:clamp(6rem,12.5vw,12.5rem)}
   .hero-sub{position:static;transform:none;font-size:1.05rem;padding:5px 16px;margin:0}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
-  .hero-cutout{justify-self:center;height:min(560px,68vh);min-height:470px;margin-top:0;rotate:y 180deg}
+  .hero-cutout{grid-column:1;grid-row:1;justify-self:center;height:min(560px,68vh);min-height:470px;margin-top:0}
   .dock{margin-top:8px}
 }
 

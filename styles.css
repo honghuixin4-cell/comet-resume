@@ -334,3 +334,22 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .ctx-menu{display:none}
   .seg a{padding:7px 11px;font-size:.8rem}
 }
+
+/* about photo: mobile-only stickers & tags so the sides don't feel empty */
+.ap-deco{display:none}
+@media(max-width:860px){
+  .about-photo img{max-width:215px}
+  .ap-deco{display:block;position:absolute;z-index:2;pointer-events:none;
+    transition:opacity .4s ease var(--d,0s),scale .7s var(--spring) var(--d,0s)}
+  .about-photo:not(.in) .ap-deco{opacity:0;scale:0}
+  .ap-deco.e1,.ap-deco.e2,.ap-deco.e3{font-size:1.7rem;animation:bob 4s ease-in-out infinite}
+  .ap-deco.e1{left:7%;top:6%}
+  .ap-deco.e2{right:8%;top:2%;animation-delay:-1.3s}
+  .ap-deco.e3{right:10%;top:56%;animation-delay:-2.4s}
+  .ap-deco.tag{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap;
+    box-shadow:0 6px 14px -8px rgba(0,0,0,.35);animation:tag-float 5s ease-in-out infinite}
+  .ap-deco.t1{left:0;top:30%;rotate:-7deg}
+  .ap-deco.t2{right:0;top:22%;rotate:6deg;animation-delay:-1.6s}
+  .ap-deco.t3{left:4%;top:62%;rotate:5deg;animation-delay:-3.1s}
+}
+@keyframes tag-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}

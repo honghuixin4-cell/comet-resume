@@ -7,6 +7,7 @@ const stagger = (sel, step, base = 0) =>
 
 stagger('.stat', 0.1);
 stagger('.about-photo .mi', 0.06, 0.4);
+stagger('.about-photo .ap-deco', 0.1, 0.3);
 stagger('.about-text .folder-list li', 0.1, 0.3);
 stagger('.about-text .chip', 0.05, 0.5);
 stagger('.folder', 0.12, 0.35);

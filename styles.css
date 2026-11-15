@@ -390,3 +390,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 @media(max-width:560px){
   .tabs a{padding:4px 9px;font-size:.72rem}
 }
+/* mobile: cherry floats in front of her face */
+@media(max-width:560px){
+  .files-stage .s1{left:41%;top:29%;z-index:3;translate:none!important}
+}

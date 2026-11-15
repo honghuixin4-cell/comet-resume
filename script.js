@@ -10,6 +10,7 @@ stagger('.about-photo .mi', 0.06, 0.4);stagger('.about-text .folder-list li', 0.
 stagger('.about-text .chip', 0.05, 0.5);
 stagger('.folder', 0.12, 0.35);
 stagger('.sticker', 0.15, 0.8);
+stagger('.ptag', 0.1, 0.3);
 stagger('.win', 0.12);
 stagger('.toc-item', 0.12);
 stagger('.together .bk', 0.12, 0.15);

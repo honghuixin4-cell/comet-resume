@@ -100,3 +100,17 @@ addEventListener('scroll', () => {
 }, { passive: true });
 addEventListener('resize', update);
 update();
+
+// ---------- Mobile menu ----------
+const heroEl = document.querySelector('.desktop');
+const menuBtn = document.querySelector('.m-menu');
+if (menuBtn) {
+  const setMenu = (open) => {
+    heroEl.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+  };
+  menuBtn.addEventListener('click', (e) => { e.stopPropagation(); setMenu(!heroEl.classList.contains('menu-open')); });
+  $$('.tabs a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', (e) => { if (!e.target.closest('.tabs')) setMenu(false); });
+}

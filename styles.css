@@ -356,41 +356,48 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .about-photo img{max-width:250px}
 }
 
-/* mobile hero: comet tucked behind the person, centered; sub + buttons below her */
+/* ============ MOBILE HERO (app-style) ============ */
+.m-bar,.m-name,.m-cta{display:none}
 @media(max-width:860px){
-  .hero-stage{align-content:start}
-  .hero-cutout{order:1;margin-top:6px;z-index:1}
-  .big-word{z-index:0;top:44%}
-  .hero-sub{order:2;position:relative;top:auto;left:auto;transform:none;margin:-28px 0 0;z-index:3}
-  .top-cta{order:3;margin-top:14px;z-index:3}
-  .dock{margin-top:22px}
-}
-/* mid widths (large phones / small tablets): shrink dock so it never clips */
-@media(min-width:561px) and (max-width:860px){
-  .dock{gap:6px;padding:7px 9px;border-radius:18px}
-  .ico{width:36px;height:36px;border-radius:9px;font-size:.85rem}
+  .desktop{padding-top:18px}
+  .m-bar{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 4px;position:relative;z-index:6}
+  .m-logo{font-family:var(--round);font-weight:800;font-size:1.45rem;letter-spacing:-.03em;color:var(--ink)}
+  .m-menu{width:40px;height:40px;border:0;background:none;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
+  .m-menu span{display:block;width:22px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s,opacity .2s}
+  .desktop.menu-open .m-menu span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .desktop.menu-open .m-menu span:nth-child(2){opacity:0}
+  .desktop.menu-open .m-menu span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  /* nav becomes a dropdown */
+  .tabs{display:none;position:absolute;top:62px;right:16px;z-index:20;flex-direction:column;gap:2px;padding:8px;min-width:170px;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-radius:16px;box-shadow:0 16px 40px -14px rgba(0,0,0,.3);animation:none}
+  .desktop.menu-open .tabs{display:flex}
+  .tabs a,.tabs a:hover{background:none;border:0;padding:10px 14px;font-size:.95rem;color:var(--ink);border-radius:10px;backdrop-filter:none}
+  .tabs a:active{background:rgba(0,0,0,.05)}
+  /* stage: person, comet behind, then name / role / buttons */
+  .hero-stage{align-content:start;min-height:0}
+  .hero-stage .top-cta{display:none}
+  .hero-cutout{order:1;margin-top:4px;z-index:1}
+  .big-word{z-index:0;top:40%}
+  .m-name{display:block;order:2;position:relative;z-index:3;margin:-30px 0 0;font-family:var(--round);font-weight:800;
+    font-size:clamp(1.6rem,7.4vw,2.2rem);letter-spacing:.01em;color:var(--ink);text-align:center}
+  .hero-sub{order:3;position:relative;top:auto;left:auto;transform:none;z-index:3;margin:4px 0 0;padding:0;background:none;
+    backdrop-filter:none;color:var(--soft);font-size:clamp(.95rem,4.2vw,1.1rem);letter-spacing:.02em}
+  .sub-name{display:none}
+  .m-cta{display:grid;order:4;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:420px;margin-top:22px;position:relative;z-index:3}
+  .m-cta a{display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 10px;border-radius:999px;
+    font-family:var(--round);font-weight:600;font-size:1.02rem;letter-spacing:.08em;transition:transform .2s}
+  .m-cta a:active{transform:scale(.97)}
+  .m-cta .primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px -10px rgba(47,123,255,.85)}
+  .m-cta .ghost{background:#fff;color:var(--ink);box-shadow:0 6px 18px -10px rgba(0,0,0,.25)}
+  /* slimmer dock */
+  .m-hide{display:none!important}
+  .dock{margin-top:26px;gap:clamp(10px,4vw,20px);padding:9px 16px;border-radius:22px}
+  .ico{width:38px;height:38px;border-radius:10px;font-size:.9rem}
+  .i-finder{font-size:1.2rem}.i-mail{font-size:1rem}
   .i-figma{grid-template-columns:7px 7px;grid-template-rows:repeat(3,7px)}
   .i-figma i{width:7px;height:7px}
-  .i-cal b{font-size:.4rem}
-  .i-pdf{font-size:.6rem}
-}
-/* mobile: CTAs live in the top nav row, next to contact */
-.tabs .nav-cta{display:none}
-@media(max-width:860px){
-  .tabs{flex-wrap:wrap;justify-content:center;row-gap:8px}
-  .tabs .nav-cta{display:inline-block;font-weight:500}
-  .tabs .nav-cta.primary{background:var(--blue);color:#fff;border-color:transparent;box-shadow:0 6px 14px -6px rgba(47,123,255,.7)}
-  .tabs .nav-cta.glass{background:rgba(255,255,255,.85);color:var(--ink)}
-  .hero-stage .top-cta{display:none}
-}
-@media(max-width:860px){
-  .tabs{gap:6px;padding:0 8px}
-  .tabs a{padding:5px 12px;font-size:.8rem}
-}
-@media(max-width:560px){
-  .tabs a{padding:4px 9px;font-size:.72rem}
 }
 /* mobile: cherry floats in front of her face */
 @media(max-width:560px){
-  .files-stage .s1{left:41%;top:29%;z-index:3;translate:none!important}
+  .files-stage .s1{left:52%;top:27%;z-index:3;translate:none!important}
 }

@@ -1,0 +1,7 @@
+.DS_Store
+# unused / backup assets
+assets/cutout-old.png
+assets/photo.jpg
+assets/HongHuiXin-Resume-full.pdf
+# duplicate of assets/HongHuiXin-Resume.pdf
+resume-print/resume-simple.pdf

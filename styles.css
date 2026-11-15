@@ -74,7 +74,8 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .hero-sub{position:static;transform:none;font-size:1.05rem;padding:5px 16px;margin:0}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
-  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0}
+  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(600px,70vh);min-height:470px;margin-top:6vh}
+  .hero-text{margin-top:4vh}
   .hero-text{margin-left:clamp(-90px,-5vw,-30px)}
   .dock{margin-top:8px}
 }

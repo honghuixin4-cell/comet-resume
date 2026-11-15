@@ -77,8 +77,8 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
   .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0;
-    -webkit-mask-image:linear-gradient(to bottom,#000 42%,rgba(0,0,0,.45) 60%,transparent 74%);
-    mask-image:linear-gradient(to bottom,#000 42%,rgba(0,0,0,.45) 60%,transparent 74%)}
+    -webkit-mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.35) 60%,transparent 66%);
+    mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.35) 60%,transparent 66%)}
   .hero-text{margin-left:clamp(-90px,-5vw,-30px)}
   .dock{margin-top:8px}
 }

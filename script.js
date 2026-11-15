@@ -6,9 +6,7 @@ const stagger = (sel, step, base = 0) =>
   $$(sel).forEach((el, i) => el.style.setProperty('--d', `${(base + i * step).toFixed(2)}s`));
 
 stagger('.stat', 0.1);
-stagger('.about-photo .mi', 0.06, 0.4);
-stagger('.about-photo .ap-deco', 0.1, 0.3);
-stagger('.about-text .folder-list li', 0.1, 0.3);
+stagger('.about-photo .mi', 0.06, 0.4);stagger('.about-text .folder-list li', 0.1, 0.3);
 stagger('.about-text .chip', 0.05, 0.5);
 stagger('.folder', 0.12, 0.35);
 stagger('.sticker', 0.15, 0.8);

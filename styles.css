@@ -374,3 +374,19 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .i-cal b{font-size:.4rem}
   .i-pdf{font-size:.6rem}
 }
+/* mobile: CTAs live in the top nav row, next to contact */
+.tabs .nav-cta{display:none}
+@media(max-width:860px){
+  .tabs{flex-wrap:wrap;justify-content:center;row-gap:8px}
+  .tabs .nav-cta{display:inline-block;font-weight:500}
+  .tabs .nav-cta.primary{background:var(--blue);color:#fff;border-color:transparent;box-shadow:0 6px 14px -6px rgba(47,123,255,.7)}
+  .tabs .nav-cta.glass{background:rgba(255,255,255,.85);color:var(--ink)}
+  .hero-stage .top-cta{display:none}
+}
+@media(max-width:860px){
+  .tabs{gap:6px;padding:0 8px}
+  .tabs a{padding:5px 12px;font-size:.8rem}
+}
+@media(max-width:560px){
+  .tabs a{padding:4px 9px;font-size:.72rem}
+}

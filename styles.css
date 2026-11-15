@@ -360,7 +360,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 .m-bar,.m-name,.m-cta{display:none}
 @media(max-width:860px){
   .desktop{padding-top:18px}
-  .m-bar{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 4px;position:relative;z-index:6}
+  .m-bar{display:flex;align-items:center;justify-content:flex-start;width:100%;padding:0 4px;position:relative;z-index:6}
   .m-logo{font-family:var(--round);font-weight:800;font-size:1.45rem;letter-spacing:-.03em;color:var(--ink)}
   .m-menu{width:40px;height:40px;border:0;background:none;display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
   .m-menu span{display:block;width:22px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s,opacity .2s}
@@ -368,7 +368,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .desktop.menu-open .m-menu span:nth-child(2){opacity:0}
   .desktop.menu-open .m-menu span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   /* nav becomes a dropdown */
-  .tabs{display:none;position:absolute;top:62px;right:16px;z-index:20;flex-direction:column;gap:2px;padding:8px;min-width:170px;
+  .tabs{display:none;position:absolute;top:62px;left:16px;z-index:20;flex-direction:column;gap:2px;padding:8px;min-width:170px;
     background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-radius:16px;box-shadow:0 16px 40px -14px rgba(0,0,0,.3);animation:none}
   .desktop.menu-open .tabs{display:flex}
   .tabs a,.tabs a:hover{background:none;border:0;padding:10px 14px;font-size:.95rem;color:var(--ink);border-radius:10px;backdrop-filter:none}

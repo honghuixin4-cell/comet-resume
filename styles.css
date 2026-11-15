@@ -59,8 +59,6 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   color:#fff;line-height:1;white-space:nowrap;
   text-shadow:0 4px 0 rgba(0,0,0,.04),0 10px 40px rgba(0,0,0,.18)}
 .hero-cutout{position:relative;z-index:1;height:470px;width:auto;object-fit:contain;margin-top:14px;
-  -webkit-mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 97%);
-  mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 97%);
   animation:float 6s ease-in-out infinite}
 .hero-sub{position:absolute;z-index:3;top:72%;left:50%;transform:translateX(-50%);
   font-family:var(--round);font-size:.95rem;color:#fff;letter-spacing:.04em;white-space:nowrap;
@@ -76,9 +74,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .hero-sub{position:static;transform:none;font-size:1.05rem;padding:5px 16px;margin:0}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
-  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0;
-    -webkit-mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.35) 60%,transparent 66%);
-    mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.35) 60%,transparent 66%)}
+  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0}
   .hero-text{margin-left:clamp(-90px,-5vw,-30px)}
   .dock{margin-top:8px}
 }

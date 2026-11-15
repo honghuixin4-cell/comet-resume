@@ -59,7 +59,6 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   color:#fff;line-height:1;white-space:nowrap;
   text-shadow:0 4px 0 rgba(0,0,0,.04),0 10px 40px rgba(0,0,0,.18)}
 .hero-cutout{position:relative;z-index:1;height:470px;width:auto;object-fit:contain;margin-top:14px;
-  filter:drop-shadow(0 18px 24px rgba(0,0,0,.18));
   -webkit-mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 97%);
   mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 97%);
   animation:float 6s ease-in-out infinite}
@@ -69,7 +68,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 /* desktop: person on the left, text on the right */
 @media(min-width:861px){
-  .hero-stage{grid-template-columns:1fr 1.1fr;max-width:1240px;margin:0 auto;column-gap:24px;min-height:520px}
+  .hero-stage{grid-template-columns:auto auto;justify-content:center;max-width:1240px;margin:0 auto;column-gap:clamp(16px,3vw,48px);min-height:520px}
   .hero-text{grid-column:2;grid-row:1;position:relative;z-index:2;justify-self:start;display:flex;flex-direction:column;align-items:flex-start;
     gap:22px;padding-right:clamp(8px,3vw,48px)}
   .big-word{position:relative;top:auto;left:auto;transform:none;transform-origin:left center;
@@ -77,7 +76,7 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .hero-sub{position:static;transform:none;font-size:1.05rem;padding:5px 16px;margin:0}
   .top-cta{position:static;gap:14px}
   .top-cta .tbtn{font-size:1rem;padding:11px 26px}
-  .hero-cutout{grid-column:1;grid-row:1;justify-self:center;height:min(560px,68vh);min-height:470px;margin-top:0}
+  .hero-cutout{grid-column:1;grid-row:1;justify-self:end;height:min(560px,68vh);min-height:470px;margin-top:0}
   .dock{margin-top:8px}
 }
 

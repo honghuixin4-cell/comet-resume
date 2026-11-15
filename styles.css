@@ -355,3 +355,13 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 @media(max-width:860px){
   .about-photo img{max-width:250px}
 }
+
+/* mobile hero: comet sits below the person instead of over her */
+@media(max-width:860px){
+  .hero-stage{align-content:start;min-height:0}
+  .top-cta{order:0}
+  .hero-cutout{order:1;margin-top:14px}
+  .big-word{order:2;position:relative;top:auto;left:auto;transform:none;margin-top:-34px;z-index:2}
+  .hero-sub{order:3;position:relative;top:auto;left:auto;transform:none;margin:10px 0 0}
+  .dock{margin-top:22px}
+}

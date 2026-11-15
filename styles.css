@@ -356,12 +356,21 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
   .about-photo img{max-width:250px}
 }
 
-/* mobile hero: comet sits below the person instead of over her */
+/* mobile hero: comet tucked behind the person, centered; sub + buttons below her */
 @media(max-width:860px){
-  .hero-stage{align-content:start;min-height:0}
-  .top-cta{order:0}
-  .hero-cutout{order:1;margin-top:14px}
-  .big-word{order:2;position:relative;top:auto;left:auto;transform:none;margin-top:-34px;z-index:2}
-  .hero-sub{order:3;position:relative;top:auto;left:auto;transform:none;margin:10px 0 0}
+  .hero-stage{align-content:start}
+  .hero-cutout{order:1;margin-top:6px;z-index:1}
+  .big-word{z-index:0;top:44%}
+  .hero-sub{order:2;position:relative;top:auto;left:auto;transform:none;margin:-28px 0 0;z-index:3}
+  .top-cta{order:3;margin-top:14px;z-index:3}
   .dock{margin-top:22px}
+}
+/* mid widths (large phones / small tablets): shrink dock so it never clips */
+@media(min-width:561px) and (max-width:860px){
+  .dock{gap:6px;padding:7px 9px;border-radius:18px}
+  .ico{width:36px;height:36px;border-radius:9px;font-size:.85rem}
+  .i-figma{grid-template-columns:7px 7px;grid-template-rows:repeat(3,7px)}
+  .i-figma i{width:7px;height:7px}
+  .i-cal b{font-size:.4rem}
+  .i-pdf{font-size:.6rem}
 }

@@ -179,6 +179,14 @@ mark{padding:1px 8px;border-radius:3px;color:var(--ink);font-weight:500}
 .ctx-menu span{padding:3px 10px;border-radius:4px}
 .ctx-menu span:nth-child(3){background:var(--blue);color:#fff}
 .files-hint{text-align:center;font-size:.8rem;color:var(--muted);margin-top:4px}
+.files-head{text-align:center;margin-bottom:6px}
+.files-head .bracket-title{margin-bottom:12px}
+.files-head p{font-size:1.05rem;letter-spacing:.08em;color:var(--soft)}
+.folder.value{cursor:default;text-align:center;line-height:1.35}
+.folder.value b{font-size:.92rem;color:var(--ink);margin-top:2px}
+.folder.value b,.folder.value small{background:rgba(255,255,255,.82);border-radius:6px;padding:1px 6px}
+.folder.value small{font-size:.74rem;color:var(--muted);white-space:nowrap}
+.folder.value:hover b{color:var(--blue)}
 
 /* ============ HUGE HEADINGS ============ */
 .huge{font-family:var(--round);font-weight:700;font-size:clamp(2.8rem,8.5vw,6rem);letter-spacing:-.045em;
